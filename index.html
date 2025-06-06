@@ -1204,15 +1204,16 @@ button[style*="position: fixed"] {
     font-size: 1rem;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .highlight-box .feature-list li {
     display: flex;
     align-items: flex-start;
     gap: 8px;
     font-size: 0.95rem;
     line-height: 1.4;
-    word-break: break-word;
     flex-wrap: nowrap;
+    word-break: normal !important;
+    overflow-wrap: anywhere;
   }
 
   .highlight-box .feature-list li::before {
@@ -1220,14 +1221,16 @@ button[style*="position: fixed"] {
     width: 20px;
     height: 20px;
     font-size: 0.75rem;
-    margin-top: 4px;
+    margin-top: 5px;
   }
 
   .highlight-box .feature-list li strong {
-    display: inline;
     font-weight: 600;
+    display: inline;
+    white-space: normal;
   }
 }
+
 
 
 }
