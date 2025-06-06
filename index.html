@@ -1204,7 +1204,38 @@ button[style*="position: fixed"] {
     font-size: 1rem;
   }
 }
+@media (max-width: 480px) {
+  .highlight-box {
+    padding: 16px;
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
 
+  .highlight-box ul {
+    padding-left: 0;
+  }
+
+  .highlight-box li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    gap: 4px;
+  }
+
+  .highlight-box li strong {
+    display: block;
+  }
+
+  .highlight-box p,
+  .highlight-box li {
+    line-height: 1.5;
+  }
+
+  .premium-card {
+    padding: 24px;
+  }
+}
 }
 </style>
 </head>
