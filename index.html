@@ -675,22 +675,7 @@ to {
 
 /* PDF/PRINT STYLES */
 @media print {
-    html, body {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    zoom: 0.75; /* reduz tudo para caber em telas pequenas */
-  }
 
-  * {
-    box-sizing: border-box;
-  }
-
-  img, svg {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-}
 * {
     -webkit-print-color-adjust: exact !important;
     color-adjust: exact !important;
@@ -1200,6 +1185,26 @@ button[style*="position: fixed"] {
     flex-direction: column;
     gap: 15px;
 }
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stat-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 0.95rem;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+}
+
 }
 </style>
 </head>
