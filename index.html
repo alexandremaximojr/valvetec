@@ -1205,29 +1205,23 @@ button[style*="position: fixed"] {
   }
 }
 @media (max-width: 768px) {
+  .highlight-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 20px;
+    box-sizing: border-box;
+  }
+
   .highlight-box .feature-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    flex-wrap: nowrap;
-    word-break: normal !important;
-    overflow-wrap: anywhere;
+    flex-wrap: wrap;
+    word-break: normal;
+    overflow-wrap: break-word;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   .highlight-box .feature-list li::before {
-    flex-shrink: 0;
-    width: 20px;
-    height: 20px;
-    font-size: 0.75rem;
-    margin-top: 5px;
-  }
-
-  .highlight-box .feature-list li strong {
-    font-weight: 600;
-    display: inline;
-    white-space: normal;
+    margin-top: 4px;
   }
 }
 
