@@ -675,6 +675,22 @@ to {
 
 /* PDF/PRINT STYLES */
 @media print {
+    html, body {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    zoom: 0.75; /* reduz tudo para caber em telas pequenas */
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img, svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
 * {
     -webkit-print-color-adjust: exact !important;
     color-adjust: exact !important;
