@@ -1206,23 +1206,27 @@ button[style*="position: fixed"] {
 }
 @media (max-width: 480px) {
   .highlight-box .feature-list li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    row-gap: 6px;
+    align-items: start;
     font-size: 0.95rem;
     line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .highlight-box .feature-list li::before {
+    align-self: start;
+    margin-top: 2px;
   }
 
   .highlight-box .feature-list li strong {
-    display: inline;
     font-weight: 600;
-    margin-bottom: 2px;
-  }
-
-  .highlight-box {
-    word-break: break-word;
+    display: inline;
   }
 }
+
 
 }
 </style>
