@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALVETEC - Especialistas em Manutenção de Válvulas Industriais</title>
+    <meta name="description" content="Evite paradas inesperadas com nossa manutenção especializada em válvulas industriais. Inspeção gratuita, ART certificado e atendimento emergencial.">
+    <link rel="icon" type="image/png" href="valvetec.png">
+    <link rel="shortcut icon" type="image/png" href="valvetec.png">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1e3a8a;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #1e3a8a;
+        }
+
+        .emergency-btn {
+            background: #dc2626;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .emergency-btn:hover {
+            background: #b91c1c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #25d366;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            background: #128c7e;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 2px solid white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        /* Trust Indicators */
+        .trust-indicators {
+            background: #f8fafc;
+            padding: 60px 0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .trust-item {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .trust-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1e3a8a;
+            border-radius: 50%;
+            color: white;
+        }
+
+        .trust-item h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1e3a8a;
+        }
+
+        .trust-item p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .service-norm {
+            background: #f0f9ff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e3a8a;
+            border-left: 4px solid #1e3a8a;
+            margin-top: auto;
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            background: #f8fafc;
+            padding: 80px 0;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .why-icon {
+            width: 80px;
+            height: 80px;
+            background: #1e3a8a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+        }
+
+        .why-item h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        /* Sectors */
+        .sectors {
+            padding: 80px 0;
+        }
+
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .sector-item {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .sector-item:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .sector-item h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-top: 15px;
+        }
+
+        .sector-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f9ff;
+            border-radius: 50%;
+            color: #1e3a8a;
+        }
+
+        /* Emergency Section */
+        .emergency {
+            background: #dc2626;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .emergency h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .emergency p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .emergency-contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .emergency-phone {
+            background: rgba(255,255,255,0.1);
+            padding: 20px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .emergency-phone:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .emergency-phone h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .emergency-phone p {
+            font-size: 24px;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item-icon {
+            width: 50px;
+            height: 50px;
+            background: #1e3a8a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-form h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1e3a8a;
+        }
+
+        .form-submit {
+            background: #1e3a8a;
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .form-submit:hover {
+            background: #1e40af;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .emergency-contact {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sectors-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section spacing */
+        section {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="valvetec.png" alt="VALVETEC Logo">
+                    <span class="logo-text">VALVETEC</span>
+                </div>
+                <nav>
+                    <ul class="nav">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#setores">Setores</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+                <a href="https://wa.me/5516991620478?text=🚨%20EMERGÊNCIA%20VALVETEC%20🚨%0A%0ATemos%20uma%20situação%20de%20emergência%20e%20precisamos%20de%20atendimento%20imediato!%0A%0ADescreva%20sua%20emergência:" class="emergency-btn">🚨 Emergência</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Evite Paradas Inesperadas<br>na Sua Indústria</h1>
+            <p class="subtitle">Manutenção especializada em válvulas industriais com ART certificado.<br>Inspeção técnica gratuita e atendimento emergencial.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5516992482172?text=Olá! Preciso de um orçamento para manutenção de válvulas." class="btn-primary">
+                    <i data-lucide="message-circle"></i> Solicitar Inspeção Gratuita
+                </a>
+                <a href="#servicos" class="btn-secondary">Conhecer Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-indicators">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i data-lucide="shield-half"></i>
+                    </div>
+                    <h3>ART Certificado</h3>
+                    <p>Todos os serviços com Anotação de Responsabilidade Técnica</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i data-lucide="siren"></i>
+                    </div>
+                    <h3>Atendimento Emergencial</h3>
+                    <p>Suporte 24h para situações críticas de parada</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i data-lucide="badge-check"></i>
+                    </div>
+                    <h3>Especialistas Certificados</h3>
+                    <p>Rafael Mariano e Marcelo Marcari com anos de experiência</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i data-lucide="search"></i>
+                    </div>
+                    <h3>Inspeção Gratuita</h3>
+                    <p>Diagnóstico técnico sem compromisso</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Serviços Especializados</h2>
+                <p>Tecnologia, precisão e confiabilidade para garantir máxima performance dos seus equipamentos</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Válvulas de Controle</h3>
+                    <p>Manutenção preventiva e corretiva com teste hidrostático e pneumático em banco próprio.</p>
+                    <div class="service-norm">ART Certificado</div>
+                </div>
+                <div class="service-card">
+                    <h3>Válvulas de Segurança</h3>
+                    <p>Revisão completa, retífica de sedes, troca de vedação e laudos técnicos com rastreabilidade.</p>
+                    <div class="service-norm">ART Certificado</div>
+                </div>
+                <div class="service-card">
+                    <h3>Válvulas Manuais</h3>
+                    <p>Inspeção e teste para válvulas globo, gaveta, esfera, retenção e borboleta.</p>
+                    <div class="service-norm">ART Certificado</div>
+                </div>
+                <div class="service-card">
+                    <h3>Manutenção em Purgadores</h3>
+                    <p>Manutenção preventiva baseada em termografia para evitar falhas graves e reduzir custos.</p>
+                    <div class="service-norm">Serviço IN LOCO</div>
+                </div>
+                <div class="service-card">
+                    <h3>Válvulas Redutoras de Pressão</h3>
+                    <p>Calibração e manutenção especializada para controle preciso de pressão.</p>
+                    <div class="service-norm">ART Certificado</div>
+                </div>
+                <div class="service-card">
+                    <h3>Válvulas Corta Chamas</h3>
+                    <p>Manutenção especializada com certificação para equipamentos de segurança crítica.</p>
+                    <div class="service-norm">Certificado e ART</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-title">
+                <h2>Por que Escolher a VALVETEC?</h2>
+                <p>Diferenciais que garantem tranquilidade e resultados para sua operação</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i data-lucide="clipboard-check"></i>
+                    </div>
+                    <h3>Laudos Técnicos Completos</h3>
+                    <p>Rastreabilidade total com documentação detalhada para auditorias e conformidade</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i data-lucide="wrench"></i>
+                    </div>
+                    <h3>Peças Originais Certificadas</h3>
+                    <p>Garantia de qualidade com componentes originais e certificados</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i data-lucide="settings"></i>
+                    </div>
+                    <h3>Banco de Testes Próprio</h3>
+                    <p>Infraestrutura completa para testes hidrostáticos e pneumáticos</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h3>Atendimento Nacional</h3>
+                    <p>Cobertura em todo território brasileiro para qualquer porte de indústria</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors Section -->
+    <section id="setores" class="sectors">
+        <div class="container">
+            <div class="section-title">
+                <h2>Setores Atendidos</h2>
+                <p>Experiência comprovada nos principais segmentos industriais</p>
+            </div>
+            <div class="sectors-grid">
+                <div class="sector-item">
+                    <div class="sector-icon">
+                        <i data-lucide="sprout"></i>
+                    </div>
+                    <h4>Usinas de Açúcar e Álcool</h4>
+                </div>
+                <div class="sector-item">
+                    <div class="sector-icon">
+                        <i data-lucide="paw-print"></i>
+                    </div>
+                    <h4>Fábricas de Ração Animal</h4>
+                </div>
+                <div class="sector-item">
+                    <div class="sector-icon">
+                        <i data-lucide="file"></i>
+                    </div>
+                    <h4>Papel e Celulose</h4>
+                </div>
+                <div class="sector-item">
+                    <div class="sector-icon">
+                        <i data-lucide="flask-conical"></i>
+                    </div>
+                    <h4>Químicas e Petroquímicas</h4>
+                </div>
+                <div class="sector-item">
+                    <div class="sector-icon">
+                        <i data-lucide="factory"></i>
+                    </div>
+                    <h4>Indústria de Gás</h4>
+                </div>
+                <div class="sector-item">
+                    <div class="sector-icon">
+                        <i data-lucide="utensils"></i>
+                    </div>
+                    <h4>Bebidas e Alimentos</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="emergency">
+        <div class="container">
+            <h2>🚨 Atendimento de Emergência</h2>
+            <p>Parada inesperada? Entre em contato imediatamente com nossos especialistas</p>
+            <div class="emergency-contact">
+                <a href="https://wa.me/5516992482172?text=🚨%20EMERGÊNCIA%20VALVETEC%20🚨%0A%0AEste%20é%20o%20Rafael%20Mariano.%20Temos%20uma%20situação%20de%20emergência%20e%20precisamos%20de%20atendimento%20imediato!%0A%0ADescreva%20sua%20emergência:" class="emergency-phone">
+                    <h4>Rafael Mariano</h4>
+                    <p>(16) 99248-2172</p>
+                </a>
+                <a href="https://wa.me/5516991620478?text=🚨%20EMERGÊNCIA%20VALVETEC%20🚨%0A%0AEste%20é%20o%20Marcelo%20Marcari.%20Temos%20uma%20situação%20de%20emergência%20e%20precisamos%20de%20atendimento%20imediato!%0A%0ADescreva%20sua%20emergência:" class="emergency-phone">
+                    <h4>Marcelo Marcari</h4>
+                    <p>(16) 99162-0478</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Entre em Contato</h3>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                        <div>
+                            <strong>WhatsApp</strong><br>
+                            (16) 99248-2172 / 99162-0478
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div>
+                            <strong>Email</strong><br>
+                            valvetec@outlook.com.br
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div>
+                            <strong>Endereço</strong><br>
+                            Avenida Marcelo Zanarotti, 324<br>
+                            Distrito Industrial - Dumont - SP<br>
+                            CEP: 14120-000<br>
+                            <small style="color: #666;">Atendimento em todo Brasil</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i data-lucide="linkedin"></i>
+                        </div>
+                        <div>
+                            <strong>LinkedIn</strong><br>
+                            <a href="https://www.linkedin.com/company/valvetec-servi%C3%A7os-industriais-e-com%C3%A9rcio-ltda" style="color: #1e3a8a;">Acesse nosso LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Solicitar Orçamento</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome Completo*</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="empresa">Empresa*</label>
+                            <input type="text" id="empresa" name="empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cargo">Cargo</label>
+                            <input type="text" id="cargo" name="cargo">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone/WhatsApp*</label>
+                            <input type="tel" id="telefone" name="telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="setor">Setor Industrial</label>
+                            <select id="setor" name="setor">
+                                <option value="">Selecione...</option>
+                                <option value="acucar-alcool">Açúcar e Álcool</option>
+                                <option value="racao-animal">Ração Animal</option>
+                                <option value="papel-celulose">Papel e Celulose</option>
+                                <option value="quimica-petroquimica">Química/Petroquímica</option>
+                                <option value="gas">Gás</option>
+                                <option value="bebidas-alimentos">Bebidas e Alimentos</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="servico">Tipo de Serviço</label>
+                            <select id="servico" name="servico">
+                                <option value="">Selecione...</option>
+                                <option value="inspecao">Inspeção Técnica Gratuita</option>
+                                <option value="valvulas-controle">Válvulas de Controle</option>
+                                <option value="valvulas-seguranca">Válvulas de Segurança</option>
+                                <option value="valvulas-manuais">Válvulas Manuais</option>
+                                <option value="purgadores">Manutenção em Purgadores</option>
+                                <option value="emergencia">Atendimento Emergencial</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva sua necessidade..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Solicitar Orçamento</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>VALVETEC</h4>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 20px;">
+                        Especialistas em manutenção de válvulas industriais.<br>
+                        Tecnologia, precisão e confiabilidade.
+                    </p>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 14px;">
+                        <i data-lucide="shield-half" style="width: 16px; height: 16px; display: inline;"></i> ART Certificado | 
+                        <i data-lucide="siren" style="width: 16px; height: 16px; display: inline;"></i> Atendimento Nacional | 
+                        <i data-lucide="wrench" style="width: 16px; height: 16px; display: inline;"></i> Peças Originais
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <a href="#servicos">Válvulas de Controle</a>
+                    <a href="#servicos">Válvulas de Segurança</a>
+                    <a href="#servicos">Válvulas Manuais</a>
+                    <a href="#servicos">Manutenção em Purgadores</a>
+                    <a href="#servicos">Atendimento Emergencial</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Setores</h4>
+                    <a href="#setores">Açúcar e Álcool</a>
+                    <a href="#setores">Papel e Celulose</a>
+                    <a href="#setores">Química e Petroquímica</a>
+                    <a href="#setores">Bebidas e Alimentos</a>
+                    <a href="#setores">Ração Animal</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <a href="tel:+5516992482172">
+                        <i data-lucide="message-circle"></i> (16) 99248-2172
+                    </a>
+                    <a href="tel:+5516991620478">
+                        <i data-lucide="message-circle"></i> (16) 99162-0478
+                    </a>
+                    <a href="mailto:valvetec@outlook.com.br">
+                        <i data-lucide="mail"></i> valvetec@outlook.com.br
+                    </a>
+                    <a href="https://www.linkedin.com/company/valvetec-servi%C3%A7os-industriais-e-com%C3%A9rcio-ltda">
+                        <i data-lucide="linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://wa.me/5516992482172">
+                        <i data-lucide="message-circle"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VALVETEC Serviços Industriais e Comércio Ltda. Todos os direitos reservados.</p>
+                <p style="margin-top: 10px; font-size: 14px;">
+                    Avenida Marcelo Zanarotti, 324 - Distrito Industrial - Dumont - SP - CEP: 14120-000
+                </p>
+                <p style="margin-top: 5px; font-size: 14px;">
+                    Atendimento em todo Brasil | Certificações ART disponíveis
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializa os ícones Lucide
+        lucide.createIcons();
+
+        // Smooth scroll para navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Formulário de contato
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Coleta dados do formulário
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Monta mensagem para WhatsApp
+            let message = `*SOLICITAÇÃO DE ORÇAMENTO - VALVETEC*\n\n`;
+            message += `*Nome:* ${data.nome}\n`;
+            message += `*Empresa:* ${data.empresa}\n`;
+            if (data.cargo) message += `*Cargo:* ${data.cargo}\n`;
+            message += `*Telefone:* ${data.telefone}\n`;
+            message += `*Email:* ${data.email}\n`;
+            if (data.setor) message += `*Setor:* ${data.setor}\n`;
+            if (data.servico) message += `*Serviço:* ${data.servico}\n`;
+            if (data.mensagem) message += `*Mensagem:* ${data.mensagem}\n`;
+            
+            // Redireciona para WhatsApp Rafael com todas as informações estruturadas
+            const whatsappUrl = `https://wa.me/5516992482172?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Limpa formulário
+            this.reset();
+            
+            // Feedback visual
+            const button = this.querySelector('.form-submit');
+            const originalText = button.textContent;
+            button.textContent = 'Redirecionando para WhatsApp...';
+            button.style.background = '#25d366';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '#1e3a8a';
+            }, 3000);
+        });
+
+        // Animação de entrada dos elementos
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.trust-item, .service-card, .why-item, .sector-item');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Inicializa animações
+        document.addEventListener('DOMContentLoaded', function() {
+            // Prepara elementos para animação
+            const elements = document.querySelectorAll('.trust-item, .service-card, .why-item, .sector-item');
+            elements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+            
+            // Executa animação inicial
+            animateOnScroll();
+        });
+
+        // Executa animação no scroll
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Click tracking para analytics (se necessário)
+        document.querySelectorAll('a, button').forEach(element => {
+            element.addEventListener('click', function() {
+                const action = this.textContent || this.getAttribute('aria-label') || 'Click';
+                console.log(`Action: ${action}`);
+                
+                // Integração com Google Analytics (quando configurado)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        'event_category': 'User Interaction',
+                        'event_label': action
+                    });
+                }
+            });
+        });
+
+        // Header transparente no scroll
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'white';
+                header.style.backdropFilter = 'none';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Lazy loading para imagens (quando houver)
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Detecta dispositivo móvel para otimizações
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // Otimizações específicas para mobile
+            document.body.classList.add('mobile-device');
+            
+            // Remove hover effects em dispositivos touch
+            const style = document.createElement('style');
+            style.textContent = `
+                @media (hover: none) {
+                    .service-card:hover,
+                    .why-item:hover,
+                    .sector-item:hover {
+                        transform: none;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    </script>
+
+    <!-- Schema.org markup para SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "VALVETEC Serviços Industriais e Comércio Ltda",
+        "description": "Especialistas em manutenção de válvulas industriais com ART certificado. Atendimento emergencial e inspeção técnica gratuita.",
+        "url": "https://www.valvetec.com.br",
+        "telephone": "+55-16-99248-2172",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Avenida Marcelo Zanarotti, 324",
+            "addressLocality": "Dumont",
+            "addressRegion": "SP",
+            "postalCode": "14120-000",
+            "addressCountry": "BR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -21.2381,
+            "longitude": -47.9644
+        },
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "serviceArea": {
+            "@type": "Country",
+            "name": "Brasil"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Industrial",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Manutenção de Válvulas de Controle",
+                        "description": "Manutenção preventiva e corretiva seguindo norma ANSI FCI 70-2"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Manutenção de Válvulas de Segurança",
+                        "description": "Serviços certificados seguindo norma NR-13"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Atendimento Emergencial",
+                        "description": "Suporte 24h para situações críticas de parada industrial"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "50"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-16-99248-2172",
+            "contactType": "customer service",
+            "availableLanguage": "Portuguese"
+        }
+    }
+    </script>
+</body>
+</html>
