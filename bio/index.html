@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALVETEC - Links Importantes</title>
+    <link rel="icon" type="image/png" href="valvetec.png">
+    <link rel="shortcut icon" type="image/png" href="valvetec.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: white;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #1e3a8a;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .company-name {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .link-card.emergency {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .link-card.emergency:hover {
+            background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+        }
+
+        .link-card.whatsapp {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .link-card.whatsapp:hover {
+            background: linear-gradient(135deg, #128c7e 0%, #075e54 100%);
+        }
+
+        .link-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .link-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .link-description {
+            font-size: 13px;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 16px 12px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            font-size: 12px;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 20px;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            opacity: 0.8;
+            font-size: 12px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 380px) {
+            .container {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            
+            .header {
+                padding: 20px 15px;
+                margin-bottom: 30px;
+            }
+            
+            .company-name {
+                font-size: 24px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header com Logo e Info -->
+        <div class="header">
+            <div class="logo">
+                <img src="valvetec.png" alt="VALVETEC Logo">
+            </div>
+            <div class="company-name">VALVETEC</div>
+            <div class="tagline">Manutenção de Válvulas Industriais</div>
+            <div class="badge">🏆 Especialistas em Vapor Industrial</div>
+        </div>
+
+        <!-- Links Principais -->
+        <div class="links-container">
+            <!-- WhatsApp Rafael - Principal -->
+            <a href="https://wa.me/5516992482172?text=Olá! Preciso de um orçamento para manutenção de válvulas." class="link-card whatsapp">
+                <span class="link-icon">💬</span>
+                <div class="link-title">WhatsApp Rafael Mariano</div>
+                <div class="link-description">(16) 99248-2172 - Orçamentos e atendimento</div>
+            </a>
+
+            <!-- WhatsApp Marcelo -->
+            <a href="https://wa.me/5516991620478?text=Olá! Preciso de um orçamento para manutenção de válvulas." class="link-card whatsapp">
+                <span class="link-icon">💬</span>
+                <div class="link-title">WhatsApp Marcelo Marcari</div>
+                <div class="link-description">(16) 99162-0478 - Orçamentos e atendimento</div>
+            </a>
+
+            <!-- Site Principal -->
+            <a href="#" class="link-card">
+                <span class="link-icon">🌐</span>
+                <div class="link-title">Site Oficial</div>
+                <div class="link-description">Conheça nossos serviços especializados</div>
+            </a>
+
+            <!-- Folder/Materiais -->
+            <a href="https://drive.google.com/file/d/1Tl28X2yOj_G9j1hJ8wz3VqB15I0dpVBd/view?usp=sharing" class="link-card" target="_blank">
+                <span class="link-icon">📄</span>
+                <div class="link-title">Folder</div>
+                <div class="link-description">Material institucional e serviços especializados</div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/valvetec-servi%C3%A7os-industriais-e-com%C3%A9rcio-ltda" class="link-card" target="_blank">
+                <span class="link-icon">💼</span>
+                <div class="link-title">LinkedIn</div>
+                <div class="link-description">Conteúdo técnico especializado</div>
+            </a>
+        </div>
+
+        <!-- Contatos Rápidos -->
+        <div class="contact-grid">
+            <a href="tel:+5516992482172" class="contact-item">
+                <span class="contact-icon">📞</span>
+                <div class="contact-label">Rafael</div>
+                <div>(16) 99248-2172</div>
+            </a>
+            <a href="tel:+5516991620478" class="contact-item">
+                <span class="contact-icon">📞</span>
+                <div class="contact-label">Marcelo</div>
+                <div>(16) 99162-0478</div>
+            </a>
+            <a href="mailto:valvetec@outlook.com.br" class="contact-item">
+                <span class="contact-icon">✉️</span>
+                <div class="contact-label">Email</div>
+                <div>valvetec@outlook.com.br</div>
+            </a>
+            <a href="https://maps.google.com/?q=Rua+Lydia+Lorenzato+Pessotti,+70,+Dumont,+São+Paulo+14120-000,+BR" class="contact-item" target="_blank">
+                <span class="contact-icon">📍</span>
+                <div class="contact-label">Localização</div>
+                <div>Dumont, SP</div>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div>🛡️ Certificações ART disponíveis</div>
+            <div style="margin-top: 8px;">Atendemos toda região de Ribeirão Preto</div>
+        </div>
+    </div>
+
+    <script>
+        // Adicionar analytics para rastrear cliques
+        document.querySelectorAll('.link-card, .contact-item').forEach(link => {
+            link.addEventListener('click', function() {
+                const title = this.querySelector('.link-title, .contact-label')?.textContent || 'Link';
+                
+                // Aqui você pode integrar com Google Analytics ou similar
+                console.log(`Click: ${title}`);
+                
+                // Exemplo de tracking
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        'event_category': 'Link na Bio',
+                        'event_label': title
+                    });
+                }
+            });
+        });
+
+        // Adicionar efeito de loading suave
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.link-card, .contact-item');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+</html>
